@@ -16,7 +16,7 @@ enum custom_keycodes {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-/* Keymap _BL: (Base Layer) Default Layer
+/* Keymap _BL: (Base Layer) Default Layer (This is wrong)
  * ,-------------------.
  * | NV | << | || | >> |
  * |----|----|----|----|
@@ -30,14 +30,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-------------------'
  */
   [_BL] = LAYOUT(
-    TG(_NV),  KC_MPRV,  KC_MPLY,   KC_MNXT, \
-    KC_P7,    KC_P8,    KC_P9,              \
-    KC_P4,    KC_P5,    KC_P6,     KC_VOLU, \
-    KC_P1,    KC_P2,    KC_P3,              \
-    KC_P0,    KC_F24,  KC_MUTE,  KC_VOLD
+    KC_MSTP,  KC_MPRV,  KC_MPLY,   KC_MNXT, \
+    KC_7,    KC_8,    KC_9,              \
+    KC_4,    KC_5,    KC_6,     KC_VOLU, \
+    KC_1,    KC_2,    KC_3,              \
+    KC_0,    TO(_NV),  KC_MUTE,  KC_VOLD
   ),
 
-/* Keymap _NV: Navigation layer
+/* Keymap _NV: Navigation layer (This is wrong)
  * ,-------------------.
  * | NV |    |    | FN |
  * |----|----|----|----|
@@ -51,11 +51,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-------------------'
  */
   [_NV] = LAYOUT(
-    TG(_NV),   XXXXXXX,  XXXXXXX,   LT(_FN, XXXXXXX), \
-    XXXXXXX,   KC_UP,   XXXXXXX,            \
-    KC_LEFT,  KC_DOWN,  KC_RGHT,   XXXXXXX, \
-    XXXXXXX,  XXXXXXX,    XXXXXXX,            \
-    KC_NLCK,  XXXXXXX,  XXXXXXX,   XXXXXXX
+    KC_MSTP,  KC_MPRV,  KC_MPLY,   KC_MNX, \
+    KC_F13,   KC_UP,   KC_F14,            \
+    KC_LEFT,  KC_DOWN,  KC_RGHT,   KC_VOLU, \
+    KC_F4,  KC_F5,    KC_F6,            \
+    KC_F11,  TO(_FN),  KC_MUTE,   KC_VOLD
   ),
 
 /* Keymap _FN: RGB Function Layer
@@ -72,11 +72,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-------------------'
  */
   [_FN] = LAYOUT(
-    RGB_MOD,  RGB_M_P,  RGB_TOG,   _______, \
-    RGB_HUD,  RGB_HUI,  XXXXXXX,            \
-    RGB_SAD,  RGB_SAI,  XXXXXXX,   XXXXXXX, \
-    RGB_VAD,  RGB_VAI,  XXXXXXX,            \
-    RESET,    XXXXXXX,  XXXXXXX,   XXXXXXX
+    RGB_MOD,  RGB_M_P,  RGB_TOG,   RGB_M_G, \
+    RGB_HUD,  RGB_HUI,  RGB_M_R,            \
+    RGB_SAD,  RGB_SAI,  RGB_M_SW,   RGB_SPI, \
+    RGB_VAD,  RGB_VAI,  RGB_M_SN,            \
+    RGB_M_B,    TO(_BL),  RGB_M_K,   RGB_SPD
   ),
 };
 
