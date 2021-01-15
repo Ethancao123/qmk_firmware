@@ -30,11 +30,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-------------------'
  */
   [_BL] = LAYOUT(
-    TG(_NV),  KC_MEDIA_PREV_TRACK,  KC_MEDIA_PLAY_PAUSE,   KC_MEDIA_NEXT_TRACK, \
+    TG(_NV),  KC_MPRV,  KC_MPLY,   KC_MNXT, \
     KC_P7,    KC_P8,    KC_P9,              \
-    KC_P4,    KC_P5,    KC_P6,     KC_AUDIO_VOL_UP, \
+    KC_P4,    KC_P5,    KC_P6,     KC_VOLU, \
     KC_P1,    KC_P2,    KC_P3,              \
-    KC_P0,    KC_F24,  KC_AUDIO_MUTE,  KC_AUDIO_VOL_DOWN
+    KC_P0,    KC_F24,  KC_MUTE,  KC_VOLD
   ),
 
 /* Keymap _NV: Navigation layer
@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   KC_UP,   XXXXXXX,            \
     KC_LEFT,  KC_DOWN,  KC_RGHT,   XXXXXXX, \
     XXXXXXX,  XXXXXXX,    XXXXXXX,            \
-    XXXXXXX,  XXXXXXX,  XXXXXXX,   XXXXXXX
+    KC_NLCK,  XXXXXXX,  XXXXXXX,   XXXXXXX
   ),
 
 /* Keymap _FN: RGB Function Layer
