@@ -51,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-------------------'
  */
   [_NV] = LAYOUT(
-    KC_MSTP,  KC_MPRV,  KC_MPLY,   KC_MNX, \
+    KC_MSTP,  KC_MPRV,  KC_MPLY,   KC_MNXT, \
     KC_F13,   KC_UP,   KC_F14,            \
     KC_LEFT,  KC_DOWN,  KC_RGHT,   KC_VOLU, \
     KC_F4,  KC_F5,    KC_F6,            \
