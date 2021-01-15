@@ -72,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-------------------'
  */
   [_FN] = LAYOUT(
-    RGB_MOD,  RGB_M_P,  RGB_TOG,   RESET, \
+    RGB_MOD,  RGB_M_P,  RGB_TOG,   RGB_M_G, \
     RGB_HUD,  RGB_HUI,  RGB_M_R,            \
     RGB_SAD,  RGB_SAI,  RGB_M_SW,   RGB_SPI, \
     RGB_VAD,  RGB_VAI,  RGB_M_SN,            \
